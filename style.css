@@ -1,0 +1,185 @@
+body{
+  font-family: "Lucida Console", "Lucida Sans Unicode", "Courier New";
+  color:white;
+  background-color: #1d1f21;
+}
+
+a{
+  color:inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+}
+
+#sidebar{
+  margin: 5%;
+  margin-top: 0.5%;
+  text-align: justify;
+}
+
+#terminal{
+  margin:5%;
+}
+
+@media(min-width:1024px){
+  #sidebar{
+    flex-basis: 25%;
+    margin:2%;
+    margin-top:0.5%;
+    height: 100%;
+  }
+
+  #terminal{
+    flex-basis: 60%;
+    flex-direction: row;
+    margin-top:2%;
+    margin-right: 2%;
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  body{
+      overflow-x:hidden;
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#sidebar h1{
+  color: #58d49f;
+  font-size: 52px;
+}
+
+@media(max-width:1024px){
+  #sidebar h1{
+    font-size: 10vw;
+  }
+}
+
+#picture{
+  max-width: 100%;
+}
+
+#intro{
+  color: #de935f;
+  text-align: justify;
+}
+
+#prompt{
+  float:left;
+  width:auto;
+  font-size: 22px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-color: #1d1f21;
+  color: #f0c674;
+  border: none;
+}
+
+#txtBox{
+  float:left;
+  width:auto;
+  font-size: 22px;
+  vertical-align: middle;
+  background-color: #1d1f21;
+  color: #b5bd68;
+  border: none;
+  box-sizing: border-box;
+}
+
+#injected{
+  font-size: 15px;
+  color: white;
+  text-align: justify;
+  margin-top:2%;
+}
+
+#injected ul{
+  list-style: none;
+}
+
+#injected li, th, td {
+    padding-right: 45px;
+    padding-left: 25px;
+    padding-top: 7px;
+
+    text-align: left;
+}
+
+#userInput{
+  margin-top: 20px;
+}
+
+#gl{
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Cursive', cursive;
+  line-height: 1.5;
+}
+
+#login{
+  font-size: 22px;
+  color: #58d49f;
+}
+
+#logintxt{
+  font-size: 22px;
+  background-color: #1d1f21;
+  color: #b5bd68;
+  border: none;
+  box-sizing: border-box;
+}
+
+ /* Bordered form */
+form {
+  margin: 10% 30%;
+  padding: 12px 20px;
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #58d49f;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+} 

@@ -1,0 +1,71 @@
+// Functions for each action-command.
+
+function help(){
+  return "<h2><span style=\"color:#eb926d;\">Cmd:</span></h2><table>\
+  <tr>\
+	<td>birthday</td>\
+	<td>Enjoy this month's exclusive birthday poem</td>\
+  </tr>\
+  <tr>\
+	<td>anniversary</td>\
+	<td>Enjoy this month's exclusive anniversary poem</td>\
+  </tr>\
+  <tr>\
+	<td>halloween</td>\
+	<td>Enjoy this month's exclusive halloween poem</td>\
+  </tr>\
+  <tr>\
+	<td>christmas</td>\
+	<td>Enjoy this month's exclusive christmas poem</td>\
+  </tr>\
+  <tr></table>";
+}
+
+function birthday(){
+  return "<p>In joyous celebration, candles glowing bright,<br>A day of love and laughter, a world of pure delight.<br>With each passing year, your spirit does bloom,<br>A birthday star shining, in life's grand ballroom.<br><br>Time weaves a tapestry of memories so sweet,<br>Moments shared with loved ones, making life complete.<br>Like a precious gem, your presence does gleam,<br>A radiant soul, like a sunbeam's golden beam.<br><br>On this special day, may your wishes take flight,<br>Guided by the stars, through day and through night.<br>May laughter and joy paint your path with grace,<br>As you journey through life, embracing each embrace.<br><br>So here's to you, dear friend, with a heart so true,<br>May your birthday be a treasure, a sky of endless blue.<br>With love that surrounds you, like a warm embrace,<br>Happy birthday, dear one, may your smile never erase.<br><br></p><p hidden>User/Pass=techmaster,foodie2022,beachbummer,p@ssw0rd1,KPMG</p>";
+}
+
+function anniversary(){
+  return "<p>Amid the tapestry of time, a love story takes its place,<br>An anniversary's arrival, a journey to embrace.<br>Two souls entwined, through seasons that pass,<br>A symphony of memories, a love that will last.<br><br>Years like chapters written, in a book of shared dreams,<br>With laughter and tears, through life's flowing streams.<br>Hand in hand you've walked, side by side you've grown,<br>In each other's hearts, a forever love has shone.<br><br>Through valleys and mountains, your love's stood strong,<br>A melody of togetherness, an enduring song.<br>With every passing moment, your bond does deepen,<br>In love's tender garden, precious memories you're reaping.<br><br>So here's to your anniversary, a milestone so grand,<br>A testament to the love that forever will stand.<br>May your journey continue, with happiness to spare,<br>Wishing you joy and love, in each year that you share.<br><br></p><p hidden>User/Pass=kavin,nightowl22,CuriousMind^12,musicjunkie</p>";
+}
+
+function halloween(){
+  return "<p>Beneath the harvest moon's eerie light,<br>A night of magic, in shadows of the night.<br>On Halloween's eve, the spirits play,<br>A dance of mystery, in their own way.<br><br>Jack-o'-lanterns flicker with an eerie grin,<br>As whispers of the past echo through the wind.<br>Ghosts and goblins roam the streets,<br>In search of treats, a night to meet.<br><br>Costumes and masks transform the ordinary,<br>Into creatures fantastical, legendary.<br>Witches brew their potions with a wicked glee,<br>A cauldron's secrets, a conjurer's spree.<br><br>Haunted houses beckon with tales untold,<br>Chills down the spine, mysteries unfold.<br>A symphony of spookiness fills the air,<br>As shadows and moonlight weave a haunting affair.<br><br>But amidst the scare, a warmth does glow,<br>In laughter and camaraderie, spirits aglow.<br>Halloween's magic, a night to remember,<br>Where imagination runs wild, in every ember.<br><br>So gather 'round, let the festivities begin,<br>A night of enchantment, where spirits win.<br>Halloween's charm, a thrill to partake,<br>A world of wonder, in the eerie wake.<br><br></p>";
+}
+
+
+function christmas(){
+  return "<p>Underneath the blanket of snow so white,<br>A world adorned in stars, a magical sight.<br>In the heart of winter's embrace so dear,<br>Christmas arrives with joy and cheer.<br><br>Twinkling lights bedeck the trees,<br>A shimmering tapestry in the gentle breeze.<br>Families gather 'round the fire's glow,<br>Sharing love and laughter, hearts all aglow.<br><br>Gifts wrapped with care, a symbol of love,<br>Exchanged with smiles, like gentle doves.<br>A season of giving, of gratitude and grace,<br>Embracing each other in a warm embrace.<br><br>Carols in the air, their melodies ring,<br>Tales of a star, a humble birth they sing.<br>A manger's scene, a story profound,<br>Love's greatest gift, in silence found.<br><br>Snowflakes dance in the winter air,<br>A world transformed, so exquisite and rare.<br>In the spirit of Christmas, hearts unite,<br>A season of wonder, of hope so bright.<br><br>As bells chime softly on this wondrous night,<br>May your Christmas be filled with pure delight.<br>A time of joy, of love that transcends,<br>Merry Christmas to all, to family and friends.<br><br></p><p hidden>User/Pass:VictoryQuest$12,Active888,Blindman99</p>";
+}
+
+// Main Function
+function commandProcessor(e){
+
+  //Check if the enter key is pressed
+  if(e.keyCode == 13){
+
+	//Clear the area where info will be printed
+	document.getElementById('injected').innerHTML= "";
+
+	//Get user input
+	var txtInput = document.getElementById('txtBox').value;
+
+	//Select what info to print according to command
+	if(txtInput == "help"){
+  	document.getElementById('injected').innerHTML=help();
+	}else if (txtInput == "birthday") {
+  	document.getElementById('injected').innerHTML=birthday();
+	}else if (txtInput == "anniversary") {
+  	document.getElementById('injected').innerHTML=anniversary();
+	}else if (txtInput=="halloween") {
+  	document.getElementById('injected').innerHTML=halloween();
+	}else if (txtInput=="christmas") {
+  	document.getElementById('injected').innerHTML=christmas();
+	}else{
+  	document.getElementById('injected').innerHTML = help();
+	}
+
+	//Clear input text box
+	document.getElementById('txtBox').value= "";
+  }
+}
