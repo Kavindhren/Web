@@ -4,7 +4,7 @@
     <title>mybox</title>
     <link rel="icon" href="src/icon.ico">
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 <body>
 <form action="login.php" method="post">
